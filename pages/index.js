@@ -36,7 +36,7 @@ const Home = () => {
         )
       ) : (
         <h1 className="text-2xl font-semibold italic">
-          Please sign in to access the postboard
+          Please sign in to access the postboard <3
         </h1>
       )}
     </Layout>
