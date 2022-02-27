@@ -1,15 +1,13 @@
-import { getSession } from "next-auth/react"
-import prisma from '../../../lib/prisma'
+import { getSession } from "next-auth/react";
+import prisma from "../../../lib/prisma";
 
-// import { PrismaClient } from "@prisma/client";
+import type { NextApiRequest, NextApiResponse } from "next";
 
-// const prisma = new PrismaClient();
-import type { NextApiRequest, NextApiResponse } from 'next'
-
-export default async function handle(req:NextApiRequest, res:NextApiResponse) {
-
+export default async function handle(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const { title, content } = req.body;
-
 
   const session = await getSession({ req });
   const result = await prisma.post.create({

@@ -1,7 +1,7 @@
 import Layout from "../components/layout/Layout";
 import React, { useState, useEffect } from "react";
 
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 import Feed from "../components/sections/Feed";
 import PostForm from "../components/sections/PostForm";
